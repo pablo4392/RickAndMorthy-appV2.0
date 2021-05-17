@@ -1,25 +1,60 @@
+p {
+    margin: 2.5px;
+    font-size: 12px;
+}
+
 .card {
-    margin: 2rem;
+    margin: 15px;
+    display: flex;
     background-color: #1e212d;
+    overflow: hidden;
     color: #fff;
-    font-family: cursive;
-    display: inline-block; 
-    text-align: center;
     border-radius: 1rem;
+}
+
+.card-img-top {
+    height: 230px;
     width: 230px;
 }
 
 .card-body {
+    padding: 10px;
+    padding-right: 20px;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
 }
 
-.card-img-top {
-    margin: 0.5rem;
-    height: 200px;
-    width: 200px;
+.card-header {
+    margin: 0;
+    margin-bottom: 12px;
 }
 
 .card-name {
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    font-size: 28px;
+}
+
+.card-status {
+    margin: 0;
+    font-size: 15px;
+    display: flex;
+}
+
+.status-light {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+.data {
+    margin: 0;
+    margin-left: 50px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.episodes {
+    display: inline;
 }

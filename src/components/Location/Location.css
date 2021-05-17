@@ -1,13 +1,32 @@
-.Location {
-    margin: 1.5rem;
-    padding: 1rem;
+.location-box {
+    padding: 15px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    border: solid 8px #000000;
-    border-radius: 2rem;
-    background-color: #30475e;
+    border: solid 5px #9fe6a0;
+    border-radius: 15px;
+    background-color: #206a5d;
     font-family: Century;
-    color: #fcf8e8;
+    color: #9fe6a0;
+}
+
+.loc-title {
+    margin: 0;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 27px;
+}
+
+.loc-type {
+    margin: 5px 0;
+    font-size: 22.5px;
+}
+
+.loc-dimension {
+    margin: 5px 0;
+    font-size: 22.5px;
+}
+
+.loc-residents {
+    margin: 5px 0;
+    font-size: 22.5px;
 }

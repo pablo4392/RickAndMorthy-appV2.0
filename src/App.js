@@ -1,39 +1,45 @@
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-
-//       </header>
-//     </div>
-//   );
-// }
-import './styles.css'
-import {useState} from 'react'
-import Instructions from './components/Instructions.js'
-import SearchBox from './components/SearchBox.js'
-import LocationContainer from './components/Location/LocationContainer.js'
+import './App.css';
+import axios from 'axios';
+import {useState, useEffect} from 'react';
+import SearchBox from './components/SearchBox.js';
+import LocationContainer from './components/Location/LocationContainer.js';
+import ResidentContainer from './components/Resident/ResidentContainer.js'
 
 function App() {
-  // const [query, setQuery] = useState('8');
   const [query, setQuery] = useState(() => {
-    return Math.floor(Math.random() * (108 - 1) + 1);
+    return Math.floor(Math.random() * 108);
   });
+  const [residents, setResidents] = useState([]);
+  const Url=`https://rickandmortyapi.com/api/location/${query}`
+
+  useEffect (() => {
+    const promise = axios.get(Url)
+    promise.then(res => {
+      setResidents(res.data.residents.slice(0, 10));
+    })  
+  }, [Url]);
+
+  const residentsArr = residents.map((value) => (
+      <ResidentContainer url={value}/>
+  ));
 
   const handleSearchUniverse = (value) => (
     setQuery(value)
-  )
+  );
 
   return (
-    <div className="App">
+    <div>
       <div className="banner">
-        <h1 className="title">Rick and Morthy App</h1>
-        <Instructions />
-        <SearchBox className="search" handleSearch={handleSearchUniverse} />
+        <div className="col-6 banner-search-box">
+            <h1 className="title">Rick and Morthy App</h1>
+            <SearchBox handleSearch={handleSearchUniverse} />
+        </div>
+        <div className="col-6 banner-location">
+            <LocationContainer Url={Url} query={query} />
+        </div>
       </div>
       <div className="body">
-        <LocationContainer query={query} />
+        { residents.length > 0 && residentsArr }
       </div>
     </div>
   );
