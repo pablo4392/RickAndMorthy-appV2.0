@@ -31,7 +31,7 @@ const ResidentContainer = ({url}) => {
             break;
             case "Dead": setStatusColor('red')
             break;
-            default: setStatusColor('')
+            default: setStatusColor('blue')
         }
     }, [status])
 

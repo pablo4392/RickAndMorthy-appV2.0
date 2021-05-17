@@ -6,11 +6,9 @@ import LocationContainer from './components/Location/LocationContainer.js';
 import ResidentContainer from './components/Resident/ResidentContainer.js'
 
 function App() {
-  const [query, setQuery] = useState(() => {
-    return Math.floor(Math.random() * 108);
-  });
+  const [query, setQuery] = useState(() => {return Math.floor(Math.random() * 108)});
   const [residents, setResidents] = useState([]);
-  const Url=`https://rickandmortyapi.com/api/location/${query}`
+  const Url=`https://rickandmortyapi.com/api/location/${query}`;
 
   useEffect (() => {
     const promise = axios.get(Url)
