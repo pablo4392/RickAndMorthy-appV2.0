@@ -16,6 +16,23 @@
     height: 50px;
     background-color: #206a5d;
     border: solid 4px #206a5d;
+    /* border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px; */
+    color: #9fe6a0;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.button-search:hover {
+    background-color: #9fe6a0;
+    color: #206a5d;
+}
+
+.button-random {
+    width: 75px;
+    height: 50px;
+    background-color: #206a5d;
+    border: solid 4px #206a5d;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     color: #9fe6a0;
@@ -23,7 +40,7 @@
     font-weight: bold;
 }
 
-.button-search:hover {
+.button-random:hover {
     background-color: #9fe6a0;
     color: #206a5d;
 }

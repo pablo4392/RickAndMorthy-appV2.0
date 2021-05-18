@@ -3,7 +3,7 @@ import axios from 'axios';
 import {useState, useEffect} from 'react';
 import SearchBox from './components/SearchBox.js';
 import LocationContainer from './components/Location/LocationContainer.js';
-import ResidentContainer from './components/Resident/ResidentContainer.js'
+import ResidentContainer from './components/Resident/ResidentContainer.js';
 
 function App() {
   const [query, setQuery] = useState(() => {return Math.floor(Math.random() * 108)});
@@ -25,12 +25,16 @@ function App() {
     setQuery(value)
   );
 
+  const handleRandomUniverse = () => (
+    setQuery(Math.floor(Math.random() * 108))
+  );
+
   return (
-    <div>
+    <div className="App">
       <div className="banner">
         <div className="col-6 banner-search-box">
             <h1 className="title">Rick and Morthy App</h1>
-            <SearchBox handleSearch={handleSearchUniverse} />
+            <SearchBox handleSearch={handleSearchUniverse} handleRandom={handleRandomUniverse} />
         </div>
         <div className="col-6 banner-location">
             <LocationContainer Url={Url} query={query} />
