@@ -14,7 +14,7 @@ const ResidentContainer = ({url}) => {
 
     useEffect(() => {
         const promise = axios(url);
-        promise.then((response) => {        
+        promise.then((response) => {     
             setPicture(response.data.image);
             setName(response.data.name);
             setStatus(response.data.status);
@@ -33,7 +33,7 @@ const ResidentContainer = ({url}) => {
             break;
             default: setStatusColor('blue')
         }
-    }, [status])
+    }, [status]);
 
     return(
         <ResidentInfo 

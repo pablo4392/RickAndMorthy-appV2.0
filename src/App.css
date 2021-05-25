@@ -17,11 +17,16 @@
   padding: 20px 0;
 }
 
-.title {
-  margin: 0;
-  font-family: "Impact";
-  font-size: 50px;
+.logo {
+  width: 350px;
+  height: 130px;
+}
+
+.subtitle {
   color: #16c79a;
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 18px;
 }
 
 .banner-location {
