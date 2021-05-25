@@ -34,7 +34,7 @@ function App() {
     <div className="App">
       <div className="banner">
         <div className="col-6 banner-search-box">
-            <img className="logo" src="https://help.redbubble.com/hc/article_attachments/360002309526/Rick_and_Morty_-_logo__English_.png" />
+            <img className="logo" src="https://help.redbubble.com/hc/article_attachments/360002309526/Rick_and_Morty_-_logo__English_.png" alt="logo" />
             <h6 className="subtitle"> App by Pablo CR</h6>
             <SearchBox handleSearch={handleSearchUniverse} handleRandom={handleRandomUniverse} />
         </div>
